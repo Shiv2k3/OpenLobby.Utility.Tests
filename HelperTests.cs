@@ -23,7 +23,10 @@ internal class HelperTests
     [Test]
     public void GetUshort_Correct()
     {
-        Assert.Fail("Not Implemented");
+        byte[] arr = { 0b1111, 0b1111 }; // 1111_0000_1111 in binary
+        int deci = 3855; // decimal value
+
+        Assert.That(Helper.GetUshort(0, 1, new(arr)), Is.EqualTo(deci));
     }
 
     [Test]
